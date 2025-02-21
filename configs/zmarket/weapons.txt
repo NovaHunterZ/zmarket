@@ -1,0 +1,426 @@
+// ============================================================================
+//
+//                              ZOMBIE:RELOADED
+//                            Weapon configuration
+//
+// Check the weapon configuration section in the manual for detailed info.
+//
+// ============================================================================
+//
+// SHORT DESCRIPTIONS
+//
+// Attribute:               Values:     Description:
+// ----------------------------------------------------------------------------
+// weaponentity             text        The entity name of the weapon refered to. (Don't change this)
+// weapontype               text        The type of weapon it is. [List types, separate by ", "]
+// weaponslot               number      The slot index the weapon resides in. (Don't change this)
+// restrictdefault          yes/no      The default restricted status of the weapon on map start.
+// toggleable               yes/no      Enable weapon to have restrictions toggled mid-game.
+// ammotype                 text        Ammo entity that belongs to weapons. (Don't change this)
+// ammoprice                number      Price of ammo for this weapon.
+// zmarketprice             number      The price of the weapon in ZMarket. [Default: CS:S buymenu price]
+// buycommand               text        E.g: sm_ak47 (!ak47).
+//
+// Notes:
+// * Omitting and option will disable the feature for the weapon.
+
+"weapons" // Counter-Strike: Source weapons
+{
+        "Glock"
+        {
+                "weaponentity"          "weapon_glock"
+                "weapon_name"           "Glock-18"
+                "weapontype"            "All, Pistol"
+                "weaponslot"            "1"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_9mm"
+                "ammoprice"             "100"
+                "zmarketprice"          "400"
+                "buycommand"            "sm_glock"
+        }
+
+        "USP"
+        {
+                "weaponentity"          "weapon_usp"
+                "weapon_name"           "USP Tactical"
+                "weapontype"            "All, Pistol"
+                "weaponslot"            "1"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_45acp"
+                "ammoprice"             "100"
+                "zmarketprice"          "500"
+                "buycommand"            "sm_usp"
+        }
+
+        "P228"
+        {
+                "weaponentity"          "weapon_p228"
+                "weapon_name"           "P228 Compact"
+                "weapontype"            "All, Pistol"
+                "weaponslot"            "1"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_357sig"
+                "ammoprice"             "100"
+                "zmarketprice"          "600"
+                "buycommand"            "sm_p228"
+        }
+
+        "Deagle"
+        {
+                "weaponentity"          "weapon_deagle"
+                "weapon_name"           "Desert Eagle"
+                "weapontype"            "All, Pistol"
+                "weaponslot"            "1"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_50ae"
+                "ammoprice"             "100"
+                "zmarketprice"          "650"
+                "buycommand"            "sm_deagle"
+        }
+
+        "Elite"
+        {
+                "weaponentity"          "weapon_elite"
+                "weapon_name"           "Dual Berettas"
+                "weapontype"            "All, Pistol"
+                "weaponslot"            "1"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_9mm"
+                "ammoprice"             "100"
+                "zmarketprice"          "800"
+                "buycommand"            "sm_elite"
+        }
+
+        "Fiveseven"
+        {
+                "weaponentity"          "weapon_fiveseven"
+                "weapon_name"           "Five-SeveN"
+                "weapontype"            "All, Pistol"
+                "weaponslot"            "1"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_57mm"
+                "ammoprice"             "100"
+                "zmarketprice"          "750"
+                "buycommand"            "sm_fiveseven"
+        }
+
+        "M3"
+        {
+                "weaponentity"          "weapon_m3"
+                "weapon_name"           "M3 Super 90"
+                "weapontype"            "All, Shotgun"
+                "weaponslot"            "0"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_buckshot"
+                "ammoprice"             "300"
+                "zmarketprice"          "1700"
+                "buycommand"            "sm_m3"
+        }
+
+        "XM1014"
+        {
+                "weaponentity"          "weapon_xm1014"
+                "weapon_name"           "XM1014"
+                "weapontype"            "All, Shotgun"
+                "weaponslot"            "0"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_buckshot"
+                "ammoprice"             "300"
+                "zmarketprice"          "3000"
+                "buycommand"            "sm_xm1014"
+        }
+
+        "Mac10"
+        {
+                "weaponentity"          "weapon_mac10"
+                "weapon_name"           "MAC-10"
+                "weapontype"            "All, SMG"
+                "weaponslot"            "0"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_45acp"
+                "ammoprice"             "300"
+                "zmarketprice"          "1400"
+                "buycommand"            "sm_mac10"
+        }
+
+        "TMP"
+        {
+                "weaponentity"          "weapon_tmp"
+                "weapon_name"           "Schmidt TMP"
+                "weapontype"            "All, SMG"
+                "weaponslot"            "0"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_9mm"
+                "ammoprice"             "300"
+                "zmarketprice"          "1250"
+                "buycommand"            "sm_tmp"
+        }
+
+        "MP5Navy"
+        {
+                "weaponentity"          "weapon_mp5navy"
+                "weapon_name"           "MP5 Navy"
+                "weapontype"            "All, SMG"
+                "weaponslot"            "0"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_9mm"
+                "ammoprice"             "300"
+                "zmarketprice"          "1500"
+                "buycommand"            "sm_mp5navy,sm_mp5"
+        }
+
+        "UMP45"
+        {
+                "weaponentity"          "weapon_ump45"
+                "weapon_name"           "UMP-45"
+                "weapontype"            "All, SMG"
+                "weaponslot"            "0"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_45acp"
+                "ammoprice"             "300"
+                "zmarketprice"          "1700"
+                "buycommand"            "sm_ump45"
+        }
+
+        "P90"
+        {
+                "weaponentity"          "weapon_p90"
+                "weapon_name"           "P90"
+                "weapontype"            "All, SMG"
+                "weaponslot"            "0"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_57mm"
+                "ammoprice"             "300"
+                "zmarketprice"          "2350"
+                "buycommand"            "sm_p90"
+        }
+
+        "Galil"
+        {
+                "weaponentity"          "weapon_galil"
+                "weapon_name"           "Galil AR"
+                "weapontype"            "All, Rifle"
+                "weaponslot"            "0"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_556mm"
+                "ammoprice"             "500"
+                "zmarketprice"          "2000"
+                "buycommand"            "sm_galil"
+        }
+
+        "Famas"
+        {
+                "weaponentity"          "weapon_famas"
+                "weapon_name"           "FAMAS"
+                "weapontype"            "All, Rifle"
+                "weaponslot"            "0"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_556mm"
+                "ammoprice"             "500"
+                "zmarketprice"          "2250"
+                "buycommand"            "sm_famas"
+        }
+
+        "AK47"
+        {
+                "weaponentity"          "weapon_ak47"
+                "weapon_name"           "AK-47"
+                "weapontype"            "All, Rifle"
+                "weaponslot"            "0"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_762mm"
+                "ammoprice"             "500"
+                "zmarketprice"          "2500"
+                "buycommand"            "sm_ak47,sm_ak"
+        }
+
+        "M4A1"
+        {
+                "weaponentity"          "weapon_m4a1"
+                "weapon_name"           "M4A1"
+                "weapontype"            "All, Rifle"
+                "weaponslot"            "0"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_556mm"
+                "ammoprice"             "500"
+                "zmarketprice"          "3100"
+                "buycommand"            "sm_m4a1,sm_m4"
+        }
+
+        "SG552"
+        {
+                "weaponentity"          "weapon_sg552"
+                "weapon_name"           "SG 552"
+                "weapontype"            "All, Rifle"
+                "weaponslot"            "0"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_556mm"
+                "ammoprice"             "500"
+                "zmarketprice"          "3500"
+                "buycommand"            "sm_sg552"
+        }
+
+        "AUG"
+        {
+                "weaponentity"          "weapon_aug"
+                "weapon_name"           "AUG"
+                "weapontype"            "All, Rifle"
+                "weaponslot"            "0"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_762mm"
+                "ammoprice"             "500"
+                "zmarketprice"          "3500"
+                "buycommand"            "sm_aug"
+        }
+
+        "Scout"
+        {
+                "weaponentity"          "weapon_scout"
+                "weapon_name"           "Steyr Scout"
+                "weapontype"            "All, Sniper"
+                "weaponslot"            "0"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_762mm"
+                "ammoprice"             "750"
+                "zmarketprice"          "2750"
+                "buycommand"            "sm_scout"
+        }
+
+        "SG550"
+        {
+                "weaponentity"          "weapon_sg550"
+                "weapon_name"           "SG 550"
+                "weapontype"            "All, Sniper"
+                "weaponslot"            "0"
+                "restrictdefault"        "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_556mm"
+                "ammoprice"             "1000"
+                "zmarketprice"          "4200"
+                "buycommand"            "sm_sg550"
+        }
+
+        "G3SG1"
+        {
+                "weaponentity"          "weapon_g3sg1"
+                "weapon_name"           "G3SG1"
+                "weapontype"            "All, Sniper"
+                "weaponslot"            "0"
+                "restrictdefault"       "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_762mm"
+                "ammoprice"             "1000"
+                "zmarketprice"          "5000"
+                "buycommand"            "sm_g3sg1"
+        }
+
+        "AWP"
+        {
+                "weaponentity"          "weapon_awp"
+                "weapon_name"           "AWP"
+                "weapontype"            "All, Sniper"
+                "weaponslot"            "0"
+                "restrictdefault"       "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_338mag"
+                "ammoprice"             "1000"
+                "zmarketprice"          "4750"
+                "buycommand"            "sm_awp"
+        }
+
+        "M249"
+        {
+                "weaponentity"          "weapon_m249"
+                "weapon_name"           "M249"
+                "weapontype"            "All, Machine Gun"
+                "weaponslot"            "0"
+                "restrictdefault"       "no"
+                "toggleable"            "yes"
+                "ammotype"              "ammo_556mm_box"
+                "ammoprice"             "1500"
+                "zmarketprice"          "5750"
+                "buycommand"            "sm_m249"
+        }
+
+        "Knife"
+        {
+                "weaponentity"          "weapon_knife"
+                "weapon_name"           "Knife"
+                "weapontype"            "All, Melee"
+                "weaponslot"            "2"
+                "restrictdefault"       "no"
+                "toggleable"            "no"
+                "buycommand"            "sm_knife"
+        }
+
+        "HEGrenade"
+        {
+                "weaponentity"          "weapon_hegrenade"
+                "weapon_name"           "HE Grenade"
+                "weapontype"            "All, Projectile"
+                "weaponslot"            "3"
+                "restrictdefault"       "no"
+                "toggleable"            "yes"
+                "zmarketprice"          "300"
+                "zmarketpurchasemax"    "1"
+                "buycommand"            "sm_hegrenade,sm_he"
+        }
+
+        "Flashbang"
+        {
+                "weaponentity"          "weapon_flashbang"
+                "weapon_name"           "Flashbang"
+                "weapontype"            "All, Projectile"
+                "weaponslot"            "3"
+                "restrictdefault"       "yes"
+                "toggleable"            "yes"
+                "zmarketprice"          "200"
+                "zmarketpurchasemax"    "1"
+                "buycommand"            "sm_flashbang"
+        }
+
+        "Smokegrenade"
+        {
+                "weaponentity"          "weapon_smokegrenade"
+                "weapon_name"           "Smoke Grenade"
+                "weapontype"            "All, Projectile"
+                "weaponslot"            "3"
+                "restrictdefault"       "no"
+                "toggleable"            "yes"
+                "zmarketprice"          "300"
+                "zmarketpurchasemax"    "1"
+                "buycommand"            "sm_smokegrenade"
+        }
+
+        "NVG"
+        {
+                "weaponentity"          "item_nvgs"
+                "weapon_name"           "Night Vision Goggles"
+                "weapontype"            "Equipment"
+                "weaponslot"            "0"
+                "restrictdefault"       "no"
+                "toggleable"            "no"
+                "zmarketprice"          "1250"
+                "buycommand"            "sm_nvg"
+        }
+}
