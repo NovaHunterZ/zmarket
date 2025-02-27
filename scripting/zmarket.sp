@@ -191,7 +191,6 @@ int GetAmmoIndex(const char[] ammoType) {
 }
 
 
-
 int FindWeaponByCommand(const char[] command) {
     for (int i = 0; i < g_WeaponData.Length; i++) {
         WeaponData weapon;
