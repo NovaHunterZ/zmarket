@@ -14,7 +14,7 @@ public Plugin myinfo = {
     name = "ZMarket",
     author = "+SyntX",
     description = "A weapon market plugin for CS:S",
-    version = "1.0",
+    version = "1.1",
     url = ""
 };
 
@@ -131,6 +131,7 @@ public Action Command_BuyWeaponDirect(int client, int args) {
 
     int currentWeapon = GetPlayerWeaponByEntityName(client, weapon.WeaponEntity);
     if (currentWeapon != -1) {
+        // Player already has the weapon, so buy ammo for it
         BuyAmmoForWeapon(client, weapon);
         return Plugin_Handled;
     }
@@ -486,8 +487,40 @@ public int WeaponCategoryMenuHandler(Menu menu, MenuAction action, int client, i
             g_WeaponData.GetArray(i, weapon, sizeof(WeaponData));
 
             if (StrEqual(weapon.WeaponEntity, weaponEntity)) {
-                GivePlayerItem(client, weapon.WeaponEntity);
-                PrintToChat(client, "[\x04ZMarket\x01] You have purchased %s.", weapon.DisplayName);
+                if (!IsPlayerInBuyZone(client)) {
+                    PrintToChat(client, "[\x04ZMarket\x01] You must be in the buy zone to purchase weapons.");
+                    return 0;
+                }
+
+                if (ZRiot_IsClientZombie(client)) {
+                    PrintToChat(client, "[\x04ZMarket\x01] Zombies cannot use the weapon market.");
+                    return Plugin_Handled;
+                }
+                if (GetClientMoney(client) < weapon.Price) {
+                    PrintToChat(client, "[\x04ZMarket\x01] You don't have enough money to buy %s. (Price: $%d)", weapon.DisplayName, weapon.Price);
+                    return 0;
+                }
+
+                int slot = GetWeaponSlot(weapon.WeaponEntity);
+                if (slot == -1) {
+                    PrintToChat(client, "[\x04ZMarket\x01] Unable to determine weapon slot for %s.", weapon.DisplayName);
+                    return 0;
+                }
+
+                int currentWeaponInSlot = GetPlayerWeaponSlot(client, slot);
+                if (currentWeaponInSlot != -1) {
+                    CS_DropWeapon(client, currentWeaponInSlot, false, true);
+                }
+
+                int newWeapon = GivePlayerItem(client, weapon.WeaponEntity);
+                if (newWeapon != -1) {
+                    EquipPlayerWeapon(client, newWeapon);
+                }
+
+                // Charge the player
+                SetClientMoney(client, GetClientMoney(client) - weapon.Price);
+                PrintToChat(client, "[\x04ZMarket\x01] You have purchased %s for $%d.", weapon.DisplayName, weapon.Price);
+
                 return 0;
             }
         }
